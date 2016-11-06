@@ -1,0 +1,15 @@
+#container {
+  max-width:1000px;
+  margin: 0 auto;
+}
+textarea {
+  width: 50%;
+}
+textarea#input.form-control {
+  float: left;
+  height:90%;
+}
+textarea#output.form-control {
+  height:90%;
+  float: right;
+}
