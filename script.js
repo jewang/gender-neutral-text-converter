@@ -1,5 +1,7 @@
 function convert(s) {
   var words = [
+    ["she's", "they're"],
+    ["he's", "they're"],
     ['he', 'they'], 
     ['she', 'they'],
     ['him', 'them'],
@@ -9,18 +11,29 @@ function convert(s) {
     ['his', 'their'],
     ['her', 'their'],
   ];
-  original_words_length = words.length;
-  for (i = 0; i < original_words_length; i++) {
-    words.push([capitalize(words[i][0]), capitalize(words[i][1])])
-    words.push([words[i][0].toUpperCase(), words[i][1].toUpperCase()])
-  }
 
   for(i = 0; i < words.length; i++) {
-    var r = new RegExp('\b' + words[i][0] + '\b', 'g');
-    console.log(r)
-    s = s.replace(r, words[i][1]);
+    console.log(i);
+    s = ireplace(s, words[i][0], words[i][1]);
   }
+
   return s;
+}
+
+function ireplace(s, p, r) {
+  replace_map = [[p, r]];
+  replace_map.push([capitalize(p), capitalize(r)]);
+  replace_map.push([p.toUpperCase(), r.toUpperCase()]);
+
+  for (j = 0; j < replace_map.length; j++) {
+    var re = new RegExp('\\b' + replace_map[j][0] + '\\b', 'g');
+    s = s.replace(re, replace_map[j][1]);
+
+    re = new RegExp('\\b' + replace_map[j][0] + '\'', 'g');
+    s = s.replace(re, replace_map[j][1] + '\'');
+  }
+  //console.log(s);
+  return s
 }
 
 function capitalize(string) {
