@@ -26,7 +26,7 @@ A linguistics library would be necessary to fix most of the below known issues.
 
 #Feature requests 
 
-No near-future plans to support these yet. Pull requests are welcome.
+Pull requests are welcome.
 
 * Find a client-side language processing library to correct limitations
 * Correct [gender-specific job
