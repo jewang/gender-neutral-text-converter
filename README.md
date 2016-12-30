@@ -3,7 +3,7 @@
 #What is this? 
 
 This is a web page that will convert gendered text into gender-neutral text. It
-runs 100% client-side. 
+runs in client-side Javascript. 
 
 #Why does this exist?
 
