@@ -1,7 +1,3 @@
-#container {
-  margin:0 10px;
-  width:100%;
-}
 textarea#input.form-control, textarea#output.form-control {
   height:50%;
   width:40%;
@@ -9,8 +5,18 @@ textarea#input.form-control, textarea#output.form-control {
   margin:10px 0;
   margin-right:20px;
 }
-
+h1 {
+  font-size:30px !important;
+}
 button.btn {
   display:block;
   clear:both;
+}
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-top:10px;
 }

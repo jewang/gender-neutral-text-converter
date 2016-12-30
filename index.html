@@ -20,29 +20,31 @@
   </head>
 
   <body>
-    <div id="container">
-      <h1>Gender Neutral Text Converter</h1>
-      Performs a first-order conversion from gendered pronouns to gender
-      neutral: he/she &rarr; they. (<a id="example" style="cursor:
-        pointer;">Example input</a>)<br
-      /><strong>Make sure to proofread converted text!</strong> 
-      <div>
+    <div class="container">
+      <div class="page-header">
+        <h1>Gender Neutral Text Converter</h1></div>
+      <p class="lead">Makes text gender-neutral: he/she &rarr; they. (<a id="example" href="#">Sample input</a>)<br />         
+       <strong> 
+        Make sure to proofread after converting!</strong>
+See
+         <a id="popoverData" href="#" data-content="Popover with
+           data-trigger" rel="popover" data-placement="bottom"
+           data-original-title="Title" data-trigger="hover">known
+           limitations</a>.
+
+</p> <div>
       <textarea id="input" class="form-control" placeholder="Input text"></textarea>
       <textarea id="output" class="form-control" placeholder="Gender-neutral output will appear here"></textarea>
       <button type="button" class="btn btn-primary">Convert</button>
       </div>
-      <br /> Runs in 100% client-side Javascript. 
-      Made by <a href="http://jewang.net">Jennifer Wang</a>. Find us on <a
-        href="https://github.com/jewang/gender-neutral-text-converter">github</a>. 
-      <br />
-      Limitations
-      <ul>
-        <li>Cannot distinguish converting her to their vs them (her apple, say hello to her).</li>
-        <li>Misses some irregular verbs.</li>
-        <li>Misses verbs that do not immediately follow subject (e.g. she
-        really likes hot sauce. and She dances and prances.)</li>
-      </ul>
     </div>
+    <footer class="footer">
+      <div class="container">
+      <p class="text-muted">Runs 100% client-side Javascript. 
+      Made by <a href="http://jewang.net">Jennifer Wang</a>. <br />Learn more
+      and view source on <a
+        href="https://github.com/jewang/gender-neutral-text-converter">GitHub</a>.</p></div></footer>
+
   </body>
 
 </html>
