@@ -1,8 +1,9 @@
 [Live version on GitHub pages!](https://jewang.github.io/gender-neutral-text-converter/)
 
-#What is this? 
+#What is a Gender Neutral Text Converter? 
 
-This is a web page that will convert gendered text into gender-neutral text. It
+This is a web page that converts gendered text into gender-neutral text using
+singular they. It
 runs in client-side Javascript. 
 
 #Why does this exist?
@@ -25,4 +26,4 @@ A linguistics library would be necessary to fix most of the below known issues.
 
 #Thanks
 
-Thanks to Jitu D, Peter G, Joseph O, and Omari S for brainstorming and feedback.
+Thanks to Jitu D, Peter G, Joseph O, Omari S, and [Alex W](http://oldspeak.us/) for brainstorming and feedback.

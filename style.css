@@ -1,9 +1,24 @@
-textarea#input.form-control, textarea#output.form-control {
+textarea#input.form-control, textarea#output.form-control, div#output {
   height:50%;
   width:40%;
   float: left;
   margin:10px 0;
   margin-right:20px;
+}
+#output {
+  white-space: pre-wrap;
+  overflow:auto;
+  resize: both;
+  user-select: all; 
+  -moz-user-select: all;
+  -webkit-user-select: all;
+  -ms-user-select: all;
+}
+.her {
+  background-color: #ff0;
+}
+.changetext {
+  background-color:#ededed;
 }
 h1 {
   font-size:30px !important;

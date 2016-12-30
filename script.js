@@ -8,7 +8,6 @@ var PRONOUNS = [
   ['herself', 'themselves'],
   ['himself', 'themselves'],
   ['his', 'their'],
-  ['her', 'their'],
 ];
 var IRREGULAR_VERBS = [
     ['was', 'were'],
@@ -20,6 +19,8 @@ var IRREGULAR_VERBS = [
     ['isn', 'aren'],
     ['goes', 'go'],
   ];
+var FORMAT_TAG_OPEN = '<span class="changetext">'
+var FORMAT_TAG_CLOSE = "</span>"
 
 var VERB_ES_SUFFIXES = ['ses', 'zes', 'xes', 'ches', 'shes'];
 
@@ -46,8 +47,9 @@ function pluralize_verb(verb) {
   var uppercase = verb === verb.toUpperCase();
   verb = pluralize_lowercase_verb(verb.toLowerCase());
   if (uppercase) {
-    return verb.toUpperCase();
+    verb = verb.toUpperCase();
   }
+  verb = FORMAT_TAG_OPEN + verb + FORMAT_TAG_CLOSE;
   return verb;
 }
 
@@ -76,12 +78,17 @@ function pronoun_replace(s, p, r) {
   replace_map = [[p, r]];
   replace_map.push([capitalize(p), capitalize(r)]);
   replace_map.push([p.toUpperCase(), r.toUpperCase()]);
+  for (j = 0; j < replace_map.length; j++) {
+    if (p == 'her') {
+      replace_map[j][1] = '<span class="her">' + replace_map[j][1] + '</span>';
+    } else {
+      replace_map[j][1] = FORMAT_TAG_OPEN + replace_map[j][1] + FORMAT_TAG_CLOSE;
+    }
+  }
 
   for (j = 0; j < replace_map.length; j++) {
     var re = new RegExp('\\b' + replace_map[j][0] + '\\b', 'g');
     s = s.replace(re, replace_map[j][1]);
-
-
   }
   return s
 }
@@ -93,7 +100,7 @@ function capitalize(string) {
 $(document).ready(function() {
   var button = $('button');
   button.click(function() {
-    $("#output").val(convert($('#input').val()));
+    $("#output").html(convert($('#input').val()));
   });
   $('#example').click(function() {
     jQuery.get('sample.txt', function(data) {
