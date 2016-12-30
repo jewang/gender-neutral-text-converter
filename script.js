@@ -12,24 +12,6 @@ function convert(s) {
     ['her', 'their'],
   ];
 
-// irregular
- // was -> were
- // has -> have
- // is -> are
- // does -> do
- // goes -> go
- 
- // ies -> y
- // flies -> fly
- 
- // drop es:
- // ses -> s
- // zes -> z
- // xes -> x
- // ches -> ches
- // shes -> shes
-
- // drop s
 
   s = pluralize_verbs(s);
   for(i = 0; i < words.length; i++) {
@@ -114,5 +96,11 @@ $(document).ready(function() {
   var button = $('button');
   button.click(function() {
     $("#output").val(convert($('#input').val()));
+  });
+  $('#example').click(function() {
+    console.log('hihi');
+    jQuery.get('sample.txt', function(data) {
+      $("#input").val(data);
+    });
   });
 });

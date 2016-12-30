@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 textarea#input.form-control, textarea#output.form-control {
-  height:90%;
+  height:70%;
   width:50%
 
 }
