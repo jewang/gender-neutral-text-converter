@@ -30,7 +30,7 @@ No near-future plans to support these yet. Pull requests are welcome.
 
 * Find a client-side language processing library to correct limitations
 * Correct [gender-specific job
-  titles](https://en.wikipedia.org/wiki/Gender_marking_in_job_titles) policeman
+  titles](https://en.wikipedia.org/wiki/Gender_marking_in_job_titles): policeman
   to police officer, fireman to firefighter
 * Hash candidate name
 * Support [alternative gender-neutral third-person
