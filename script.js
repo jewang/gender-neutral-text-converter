@@ -45,12 +45,14 @@ function pluralize_verbs(s) {
 
 function pluralize_verb(verb) {
   var uppercase = verb === verb.toUpperCase();
-  verb = pluralize_lowercase_verb(verb.toLowerCase());
+  var new_verb = pluralize_lowercase_verb(verb.toLowerCase());
   if (uppercase) {
-    verb = verb.toUpperCase();
+    new_verb = new_verb.toUpperCase();
   }
-  verb = FORMAT_TAG_OPEN + verb + FORMAT_TAG_CLOSE;
-  return verb;
+  if (verb != new_verb) {
+    new_verb = FORMAT_TAG_OPEN + new_verb + FORMAT_TAG_CLOSE;
+  }
+  return new_verb;
 }
 
 function pluralize_lowercase_verb(verb) {
