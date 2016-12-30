@@ -24,6 +24,18 @@ A linguistics library would be necessary to fix most of the below known issues.
 * Misses verbs that do not immediately follow subject: She really likes hot sauce. She dances and prances.
 * Cannot handle some foreign location names: he'shan
 
+#Feature requests 
+
+No near-future plans to support these yet. Pull requests are welcome.
+
+* Find a client-side language processing library to correct limitations
+* Correct [gender-specific job
+  titles](https://en.wikipedia.org/wiki/Gender_marking_in_job_titles) policeman
+  to police officer, fireman to firefighter
+* Hash candidate name
+* Support [alternative gender-neutral third-person
+  pronouns](https://en.wikipedia.org/wiki/Gender-specific_and_gender-neutral_third-person_pronouns#Summary)
+
 #Thanks
 
 Thanks to [Jitu D](https://github.com/r2jitu), Peter G, Joseph O, Omari S, [Momo W](https://github.com/maurwang), and [Alex W](http://oldspeak.us/) for brainstorming and feedback.

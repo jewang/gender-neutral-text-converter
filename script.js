@@ -4,6 +4,7 @@ var PRONOUNS = [
   ['he', 'they'], 
   ['she', 'they'],
   ['him', 'them'],
+  ['hers', 'theirs'],
   ['her', 'them'],
   ['herself', 'themselves'],
   ['himself', 'themselves'],
