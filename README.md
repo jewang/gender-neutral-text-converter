@@ -26,4 +26,4 @@ A linguistics library would be necessary to fix most of the below known issues.
 
 #Thanks
 
-Thanks to Jitu D, Peter G, Joseph O, Omari S, and [Alex W](http://oldspeak.us/) for brainstorming and feedback.
+Thanks to [Jitu D](https://github.com/r2jitu), Peter G, Joseph O, Omari S, [Momo W](https://github.com/maurwang), and [Alex W](http://oldspeak.us/) for brainstorming and feedback.
