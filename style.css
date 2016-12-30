@@ -1,15 +1,16 @@
 #container {
-  max-width:1000px;
-  margin: 0 auto;
+  margin:0 10px;
+  width:100%;
 }
 textarea#input.form-control, textarea#output.form-control {
-  height:70%;
-  width:50%
-
-}
-textarea#input.form-control {
+  height:50%;
+  width:40%;
   float: left;
+  margin:10px 0;
+  margin-right:20px;
 }
-textarea#output.form-control {
-  float: right;
+
+button.btn {
+  display:block;
+  clear:both;
 }
