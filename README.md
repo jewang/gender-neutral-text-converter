@@ -11,7 +11,7 @@ Screening and interview processes often include a written component. By masking
 gender using gender-neutral language, we can avoid [unconscious gender
 bias](https://diversity.ucsf.edu/resources/unconscious-bias) in hiring
 processes. Because this kind of content is often sensitive, this script runs
-completely on the user's local machine requiring no cloud and no Internet.
+on the user's local machine, no Internet connection required. Text never touches a server or the cloud.
 
 I would love to hear other use cases for this script. Feel free to email me.
 
