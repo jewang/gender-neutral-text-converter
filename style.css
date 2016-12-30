@@ -20,3 +20,6 @@ button.btn {
   background-color: #f5f5f5;
   padding-top:10px;
 }
+span.muted {
+  font-size:14px;
+}
