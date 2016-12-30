@@ -24,7 +24,6 @@ function convert(s) {
 function pluralize_verbs(s) {
   var re = new RegExp('\\bs?he\\b\\s+(.+?)\\b', 'gi');
   var sep = ' ';
-  console.log('hi');
   while((match = re.exec(s)) != null) {
     split = match[0].split(sep);
     replace = split[0] + sep + pluralize_verb(split[1]);
@@ -98,10 +97,8 @@ $(document).ready(function() {
     $("#output").val(convert($('#input').val()));
   });
   $('#example').click(function() {
-    console.log('hihi');
     jQuery.get('sample.txt', function(data) {
       $("#input").val(data);
     });
   });
 });
-$('#popoverData').popover();
