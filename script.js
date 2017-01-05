@@ -37,8 +37,8 @@ function convert(s) {
 function highlight_gendered(s) {
   var regexstr = '';
   // TODO: Make accents work
-  var others = ['girl', 
-      'boy', 'female', 'male', 
+  var others = ['girl[a-z]*', 
+      'boy[a-z]*', 'female[a-z]*', 'male', 
       'fianc(e|&eacute;|é)e?', 'husband', 
       'wife', 'wive', 'actor', '[a-z]*ess(es)?', '[a-z]*ster', 'ms', 
       'mr', 'miss(es)?', 'mister', 'madam', 'maiden', 'lad', 
@@ -55,23 +55,23 @@ function highlight_gendered(s) {
     replace = '<span class="highlighttext">' + match[0] + '</span>';
     s = s.substring(0, match.index) + replace + s.substring(re.lastIndex, s.length);
     re.lastIndex += replace.length - match[0].length;
-    console.log(s);
   }
   return s;
 }
 
 function pluralize_verbs(s) {
   var re = new RegExp('\\bs?he\\b\\s+(.+?)\\b', 'gi');
-  var sep = ' ';
+  var sep = /\b/gi;
   while((match = re.exec(s)) != null) {
     split = match[0].split(sep);
-    replace = split[0] + sep + pluralize_verb(split[1]);
+    replace = split[0] + split[1] + pluralize_verb(split[2]);
     s = s.replace(match[0], replace);
   }
   return s;
 }
 
 function pluralize_verb(verb) {
+  console.log(verb);
   var uppercase = verb === verb.toUpperCase();
   var new_verb = pluralize_lowercase_verb(verb.toLowerCase());
   if (uppercase) {
