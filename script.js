@@ -30,6 +30,32 @@ function convert(s) {
   for(i = 0; i < PRONOUNS.length; i++) {
     s = pronoun_replace(s, PRONOUNS[i][0], PRONOUNS[i][1]);
   }
+  s = highlight_gendered(s);
+  return s;
+}
+
+function highlight_gendered(s) {
+  var regexstr = '';
+  // TODO: Make accents work
+  var others = ['girl', 
+      'boy', 'female', 'male', 
+      'fianc(e|&eacute;|é)e?', 'husband', 
+      'wife', 'wive', 'actor', '[a-z]*ess(es)?', '[a-z]*ster', 'ms', 
+      'mr', 'miss(es)?', 'mister', 'madam', 'maiden', 'lad', 
+      'lass(es)?', 'latin(o|a)', '[a-z]*ette', 'comedienne', '(lady|ladies)', 'femme', 
+      'feminine', 'masculine', 'masseuse'];
+  for (i = 0; i<others.length; i++) {
+    regexstr += '\\b' + others[i] + 's?\\b|';
+  }
+  regexstr += '\\b[a-z]*m(a|e)ns?\\b';
+  var re = new RegExp(regexstr, 'gi');
+  var sep = ' ';
+  while((match = re.exec(s)) != null) {
+    replace = '<span class="highlighttext">' + match[0] + '</span>';
+    s = s.substring(0, match.index) + replace + s.substring(re.lastIndex, s.length);
+    re.lastIndex += replace.length - match[0].length;
+    console.log(s);
+  }
   return s;
 }
 

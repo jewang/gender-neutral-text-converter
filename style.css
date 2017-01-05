@@ -14,8 +14,11 @@ textarea#input.form-control, textarea#output.form-control, div#output {
   -webkit-user-select: all;
   -ms-user-select: all;
 }
-.her {
+.highlighttext {
   background-color: #ff0;
+}
+.her {
+  background-color: #0ff;
 }
 .changetext {
   background-color:#ededed;
