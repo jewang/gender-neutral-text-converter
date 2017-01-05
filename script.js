@@ -71,7 +71,6 @@ function pluralize_verbs(s) {
 }
 
 function pluralize_verb(verb) {
-  console.log(verb);
   var uppercase = verb === verb.toUpperCase();
   var new_verb = pluralize_lowercase_verb(verb.toLowerCase());
   if (uppercase) {
