@@ -43,7 +43,8 @@ function highlight_gendered(s) {
       'wife', 'wive', 'actor', '[a-z]*ess(es)?', '[a-z]*ster', 'ms', 
       'mr', 'miss(es)?', 'mister', 'madam', 'maiden', 'lad', 
       'lass(es)?', 'latin(o|a)', '[a-z]*ette', 'comedienne', '(lady|ladies)', 'femme', 
-      'feminine', 'masculine', 'masseuse'];
+      'feminine', 'masculine', 'masseuse', 'ghc', 'anita([a-z]| )*borg', 'grace([a-z]| )*hopper', 
+      'ghc', 'ncwit', 'ada', 'lovelace'];
   for (i = 0; i<others.length; i++) {
     regexstr += '\\b' + others[i] + 's?\\b|';
   }
